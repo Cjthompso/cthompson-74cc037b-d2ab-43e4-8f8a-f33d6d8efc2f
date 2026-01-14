@@ -105,16 +105,15 @@ export class ViewerDashboardComponent implements OnInit {
   ngOnInit() {
     this.loadTasks();
   }
-
   loadTasks() {
     this.tasksService.getTasks().subscribe(tasks => this.tasks.set(tasks));
   }
 
-  tasksByStatus(status: string) {
+  tasksByStatus(status: 'todo' | 'in_progress' | 'done') {
     return this.tasks().filter(t => t.status === status).length;
   }
 
-  getTasksByStatus(status: string) {
+  getTasksByStatus(status: 'todo' | 'in_progress' | 'done') {
     return this.tasks().filter(t => t.status === status);
   }
 
