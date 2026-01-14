@@ -131,8 +131,8 @@ export const ROLE_PERMISSIONS: Record<Role, Permission[]> = {
     Permission.DELETE_TASK,
     Permission.VIEW_AUDIT_LOG,
   ],
-  [Role.VIEWER]: [Permission.READ_TASK,
-      Permission.UPDATE_TASK,
+  [Role.VIEWER]: [
+    Permission.READ_TASK
   ],
 };
 
